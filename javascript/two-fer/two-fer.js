@@ -1,4 +1,5 @@
 
-export const twoFer = () => {
-  return "One for you, one for me."
+export const twoFer = (name) => {
+  const givenName = name || 'you'
+  return `One for ${givenName}, one for me.`
 }
