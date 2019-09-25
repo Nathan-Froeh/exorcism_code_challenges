@@ -17,7 +17,7 @@ describe('A leap year', () => {
     expect(isLeap(2000)).toBe(true);
   });
 
-  xtest('year divisible by 200, not divisible by 400: common year', () => {
+  test('year divisible by 200, not divisible by 400: common year', () => {
     expect(isLeap(1800)).toBe(false);
   });
 });
