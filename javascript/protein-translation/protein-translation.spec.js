@@ -5,31 +5,31 @@ describe('ProteinTranslation', () => {
     expect(translate()).toEqual([]);
   });
 
-  xtest('Methionine codon translates into protein', () => {
+  test('Methionine codon translates into protein', () => {
     expect(translate('AUG')).toEqual(['Methionine']);
   });
 
-  xtest('Phenylalanine codons translate into protein', () => {
+  test('Phenylalanine codons translate into protein', () => {
     expect(translate('UUUUUC')).toEqual(['Phenylalanine', 'Phenylalanine']);
   });
 
-  xtest('Leucine codons translate into protein', () => {
+  test('Leucine codons translate into protein', () => {
     expect(translate('UUAUUG')).toEqual(['Leucine', 'Leucine']);
   });
 
-  xtest('Serine codons translate into protein', () => {
+  test('Serine codons translate into protein', () => {
     expect(translate('UCUUCCUCAUCG')).toEqual(['Serine', 'Serine', 'Serine', 'Serine']);
   });
 
-  xtest('Tyrosine codons translate into protein', () => {
+  test('Tyrosine codons translate into protein', () => {
     expect(translate('UAUUAC')).toEqual(['Tyrosine', 'Tyrosine']);
   });
 
-  xtest('Cysteine codons translate into protein', () => {
+  test('Cysteine codons translate into protein', () => {
     expect(translate('UGUUGC')).toEqual(['Cysteine', 'Cysteine']);
   });
 
-  xtest('Tryptophan codon translates into protein', () => {
+  test('Tryptophan codon translates into protein', () => {
     expect(translate('UGG')).toEqual(['Tryptophan']);
   });
 
