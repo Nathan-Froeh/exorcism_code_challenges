@@ -4,5 +4,16 @@
 //
 
 export const translate = () => {
-  throw new Error("Remove this statement and implement this function");
+  return []
 };
+
+const proteins = [
+  {Methionine: ['AUG']}, 
+  {Phenylalanine: ['UUU', 'UUC']}, 
+  {Leucine: ['UUA', 'UUG']}, 
+  {Serine: ['UCU', 'UCC', 'UCA', 'UCG']}, 
+  {Tyrosine: ['UAU', 'UAC']}, 
+  {Cysteine: ['UGU', 'UGC']}, 
+  {Tryptophan: ['UGG']},
+  {STOP: ['UAA', 'UAG', 'UGA']}
+]
