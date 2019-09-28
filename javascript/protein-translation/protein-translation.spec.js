@@ -37,23 +37,23 @@ describe('ProteinTranslation', () => {
     expect(translate('UAAUUUUUA')).toEqual([]);
   });
 
-  xtest('Sequence starts with stop codon 2', () => {
+  test('Sequence starts with stop codon 2', () => {
     expect(translate('UAGAUGUAU')).toEqual([]);
   });
 
-  xtest('Sequence starts with stop codon 3', () => {
+  test('Sequence starts with stop codon 3', () => {
     expect(translate('UGAUGU')).toEqual([]);
   });
 
-  xtest('Small RNA strand', () => {
+  test('Small RNA strand', () => {
     expect(translate('AUGUUUUCU')).toEqual(['Methionine', 'Phenylalanine', 'Serine']);
   });
 
-  xtest('Stop codon ends translation', () => {
+  test('Stop codon ends translation', () => {
     expect(translate('AUGUUUUCUUAAAUG')).toEqual(['Methionine', 'Phenylalanine', 'Serine']);
   });
 
-  xtest('Invalid codon throws error', () => {
+  test('Invalid codon throws error', () => {
     expect(() => translate('LOL')).toThrow(new Error('Invalid codon'));
   });
 });

@@ -5,17 +5,22 @@
 
 export const translate = (rna) => {
   if(!rna) return []
-  const condons = rna.match(/.{1,3}/g)
-
-  const proteins = condons.reduce((acc, condon, index, arr) => {
+  const codons = rna.match(/.{1,3}/g)
+  const allCodons = proteinList.map((protein) => {
+    return Object.values(protein)[0]
+  }).flat()
+  const proteins = codons.reduce((acc, codon, index, arr) => {
+    if(!allCodons.includes(codon)) {
+      throw Error('Invalid codon')
+    }
     proteinList.forEach((protein) => {
-      if(Object.values(protein)[0].includes(condon)
+      if(Object.values(protein)[0].includes(codon)
         && Object.keys(protein)[0] !== 'STOP') {
         acc.push(Object.keys(protein)[0])
-      } else if(Object.values(protein)[0].includes(condon)
+      } else if(Object.values(protein)[0].includes(codon)
       && Object.keys(protein)[0] === 'STOP') {
         arr.splice(index)
-      }
+      } 
     })
     return acc
   }, [])
