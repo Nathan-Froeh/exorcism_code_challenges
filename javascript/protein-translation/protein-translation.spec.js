@@ -33,7 +33,7 @@ describe('ProteinTranslation', () => {
     expect(translate('UGG')).toEqual(['Tryptophan']);
   });
 
-  xtest('Sequence starts with stop codon 1', () => {
+  test('Sequence starts with stop codon 1', () => {
     expect(translate('UAAUUUUUA')).toEqual([]);
   });
 
