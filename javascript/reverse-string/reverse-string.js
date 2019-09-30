@@ -4,6 +4,14 @@
 //
 
 export const reverseString = (string) => {
+  const removedCharater = string[0]
+  const newString = string.substring(1)
+
+  if(string.length === 0 ) {
+    return string
+  } else {
+    return reverseString(newString) + removedCharater
+  }
 
 };
 
