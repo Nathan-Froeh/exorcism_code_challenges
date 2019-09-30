@@ -3,6 +3,12 @@
 // convenience to get you started writing code faster.
 //
 
-export const reverseString = () => {
-  throw new Error("Remove this statement and implement this function");
+export const reverseString = (string) => {
+
 };
+
+
+//pass in string
+// if string is 0 end
+// if string !0 recursive call with unshifted string
+// on end return string
