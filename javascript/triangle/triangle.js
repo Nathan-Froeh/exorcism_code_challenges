@@ -12,6 +12,8 @@ export class Triangle {
       return 'equilateral'
     } else if(this.isosceles() === 2) {
       return 'isosceles'
+    } else {
+      return 'scalene'
     }
   }
 
