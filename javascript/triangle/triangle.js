@@ -9,6 +9,7 @@ export class Triangle {
 
   kind() {
     this.illegalValue()
+    this.inequality()
     if(this.side1 === this.side2 && this.side2 === this.side3) {
       return 'equilateral'
     } else if(this.isosceles() === 2) {
@@ -28,6 +29,17 @@ export class Triangle {
     const sides = [this.side1, this.side2, this.side3]
     const size = sides.find(side => side <= 0)
     if(typeof size !== 'undefined') {
+      throw new Error()
+    }
+  }
+
+  inequality() {
+    const sides = [this.side1, this.side2, this.side3]
+    if(sides[0] > (sides[1] + sides[2])) {
+      throw new Error()
+    } else if (sides[1] > (sides[0] + sides[2])) {
+      throw new Error()
+    } else if (sides[2] > (sides[0] + sides[1])) {
       throw new Error()
     }
   }
