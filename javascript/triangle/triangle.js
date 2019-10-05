@@ -10,6 +10,8 @@ export class Triangle {
   kind() {
     if(this.side1 === this.side2 && this.side2 === this.side3) {
       return 'equilateral'
+    } else if (this.side1 !== this.side2 && this.side2 === this.side3) {
+      return 'isosceles'
     }
   }
 }

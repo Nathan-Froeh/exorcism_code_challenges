@@ -6,12 +6,12 @@ describe('Triangle', () => {
     expect(triangle.kind()).toEqual('equilateral');
   });
 
-  xtest('larger equilateral triangles also have equal sides', () => {
+  test('larger equilateral triangles also have equal sides', () => {
     const triangle = new Triangle(10, 10, 10);
     expect(triangle.kind()).toEqual('equilateral');
   });
 
-  xtest('isosceles triangles have last two sides equal', () => {
+  test('isosceles triangles have last two sides equal', () => {
     const triangle = new Triangle(3, 4, 4);
     expect(triangle.kind()).toEqual('isosceles');
   });
