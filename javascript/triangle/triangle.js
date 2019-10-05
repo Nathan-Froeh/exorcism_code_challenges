@@ -10,8 +10,14 @@ export class Triangle {
   kind() {
     if(this.side1 === this.side2 && this.side2 === this.side3) {
       return 'equilateral'
-    } else if (this.side1 !== this.side2 && this.side2 === this.side3) {
+    } else if(this.isosceles() === 2) {
       return 'isosceles'
     }
+  }
+
+  isosceles() {
+    const sides = [this.side1, this.side2, this.side3]
+    const unequal = [...new Set(sides)]
+    return unequal.length
   }
 }
