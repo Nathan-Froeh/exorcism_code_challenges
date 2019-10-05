@@ -4,11 +4,13 @@
 //
 
 export class Triangle {
-  constructor() {
-    throw new Error("Remove this statement and implement this function");
+  constructor(side1, side2, side3) {
+    this.side1 = side1,
+    this.side2 = side2,
+    this.side3 = side3
   }
 
   kind() {
-    throw new Error("Remove this statement and implement this function");
+    console.log(this.side1, this.side2, this.side3)
   }
 }
